@@ -1,5 +1,7 @@
-[TEST
-]"""
+# DML 
+
+```MYSQL
+
 -- MEMBER
 INSERT INTO MEMBER (member_id, email, password, name, phone_number, is_admin)
 VALUES
@@ -170,10 +172,15 @@ VALUES
 ('qna008', 'mem010', 'Y', 'Free trial available.', NOW(), NOW(), NOW()),
 ('qna009', 'mem001', 'Y', 'Email changed.', NOW(), NOW(), NOW()),
 ('qna010', 'mem002', 'Y', 'Contact via email.', NOW(), NOW(), NOW());
-"""
+```
 
 
-"""
+---
+
+# DDL
+
+```MYSQL
+
 USE SHOP;
 DROP TABLE IF EXISTS MEMBER_COUPON, COUPON, POINT, POINT_HISTORY, ANSWER, QUESTION, ORDER_DETAIL, ORDERS, REVIEW, LICENSE, CATEGORY, PRODUCT_IMAGE, PRODUCT, CART, WISHLIST, MEMBER;
 
@@ -348,4 +355,5 @@ ALTER TABLE REVIEW MODIFY last_edit_date DATETIME DEFAULT NOW();
 
 
 
-"""
+```
+
