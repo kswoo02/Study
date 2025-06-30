@@ -1,4 +1,5 @@
-"""
+[TEST
+]"""
 -- MEMBER
 INSERT INTO MEMBER (member_id, email, password, name, phone_number, is_admin)
 VALUES
