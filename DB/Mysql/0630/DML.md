@@ -177,183 +177,84 @@ VALUES
 
 ---
 
-# DDL
+```mysql
+-- ================================================= --
+--                  포인트 (POINT) 데이터
+-- ================================================= --
+INSERT INTO POINT (member_id, last_point, expire_at)
+VALUES
+    (1, 1000, NOW() + INTERVAL 365 DAY),
+    (2, 2000, NOW() + INTERVAL 365 DAY),
+    (3, 3000, NOW() + INTERVAL 365 DAY),
+    (4, 4000, NOW() + INTERVAL 365 DAY),
+    (5, 5000, NOW() + INTERVAL 365 DAY),
+    (6, 6000, NOW() + INTERVAL 365 DAY),
+    (7, 7000, NOW() + INTERVAL 365 DAY),
+    (8, 8000, NOW() + INTERVAL 365 DAY),
+    (9, 9000, NOW() + INTERVAL 365 DAY),
+    (10, 10000, NOW() + INTERVAL 365 DAY);
 
-```MYSQL
+-- ================================================= --
+--               포인트 내역 (POINT_HISTORY) 데이터
+-- ================================================= --
+INSERT INTO POINT_HISTORY (created_at, member_id, point, plus_minus, description)
+VALUES
+    (NOW(), 1, 1000, '+', 'Signup bonus'),
+    (NOW(), 2, 1500, '+', 'First order'),
+    (NOW(), 3, 2000, '+', 'Event reward'),
+    (NOW(), 4, 500, '-', 'Used for purchase'),
+    (NOW(), 5, 3000, '+', 'Promotion bonus'),
+    (NOW(), 6, 700, '-', 'Purchase'),
+    (NOW(), 7, 1000, '+', 'Referral'),
+    (NOW(), 8, 1200, '+', 'Feedback'),
+    (NOW(), 9, 800, '-', 'Purchase'),
+    (NOW(), 10, 2500, '+', 'Promotion');
 
-USE SHOP;
-DROP TABLE IF EXISTS MEMBER_COUPON, COUPON, POINT, POINT_HISTORY, ANSWER, QUESTION, ORDER_DETAIL, ORDERS, REVIEW, LICENSE, CATEGORY, PRODUCT_IMAGE, PRODUCT, CART, WISHLIST, MEMBER;
+-- ================================================= --
+--                    리뷰 (REVIEW) 데이터
+-- ================================================= --
+INSERT INTO REVIEW (product_id, member_id, content, rate, last_edit_date, first_review)
+VALUES
+    (1, 1, 'Great product!', 5, NOW(), NOW()),
+    (2, 2, 'Satisfied', 4, NOW(), NOW()),
+    (3, 3, 'Exciting game', 5, NOW(), NOW()),
+    (4, 4, 'Challenging puzzles', 4, NOW(), NOW()),
+    (5, 5, 'Professional tool', 5, NOW(), NOW()),
+    (6, 6, 'Very useful', 4, NOW(), NOW()),
+    (7, 7, 'Essential', 5, NOW(), NOW()),
+    (8, 8, 'Good alternative', 4, NOW(), NOW()),
+    (9, 9, 'Secure solution', 5, NOW(), NOW()),
+    (10, 10, 'Fun racing', 5, NOW(), NOW());
 
-CREATE TABLE MEMBER (
-    member_id VARCHAR(20) PRIMARY KEY,
-    email VARCHAR(40) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    name VARCHAR(20) NOT NULL,
-    phone_number VARCHAR(20) NOT NULL,
-    is_admin VARCHAR(1) NOT NULL,
-    register_date DATETIME NOT NULL
-);
+-- ================================================= --
+--                    문의 (QUESTION) 데이터
+-- ================================================= --
+INSERT INTO QUESTION (qna_id, member_id, title, content, first_question, last_edit_date)
+VALUES
+    (1, 1, 'How to install?', 'Steps to install product', NOW(), NOW()),
+    (2, 2, 'License issue', 'License not working', NOW(), NOW()),
+    (3, 3, 'Compatibility?', 'Works on Mac?', NOW(), NOW()),
+    (4, 4, 'Refund?', 'How to get a refund?', NOW(), NOW()),
+    (5, 5, 'Update?', 'Is update free?', NOW(), NOW()),
+    (6, 6, 'Discount?', 'Available discounts?', NOW(), NOW()),
+    (7, 7, 'Features?', 'What features included?', NOW(), NOW()),
+    (8, 8, 'Trial?', 'Is there a free trial?', NOW(), NOW()),
+    (9, 9, 'Account?', 'Change email?', NOW(), NOW()),
+    (10, 10, 'Support?', 'How to contact support?', NOW(), NOW());
 
-CREATE TABLE CATEGORY (
-    category_id VARCHAR(20) PRIMARY KEY,
-    category_name VARCHAR(20) NOT NULL,
-    parent_id VARCHAR(20),
-    FOREIGN KEY (parent_id) REFERENCES CATEGORY(category_id)
-);
-
-CREATE TABLE PRODUCT (
-    product_id VARCHAR(20) PRIMARY KEY,
-    category_id VARCHAR(20) NOT NULL,
-    name VARCHAR(20) NOT NULL,
-    content TEXT NOT NULL,
-    price INT NOT NULL,
-    end_day INT NOT NULL,
-    version VARCHAR(10) NOT NULL,
-    first_product DATETIME NOT NULL,
-    last_edit_date DATETIME NOT NULL,
-    FOREIGN KEY (category_id) REFERENCES CATEGORY(category_id)
-);
-
-CREATE TABLE PRODUCT_IMAGE (
-    image VARCHAR(20) NOT NULL,
-    product_id VARCHAR(20) NOT NULL,
-    PRIMARY KEY (image, product_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id)
-);
-
-CREATE TABLE LICENSE (
-    product_id VARCHAR(20) NOT NULL,
-    member_id VARCHAR(20) NOT NULL,
-    expire_date DATETIME NOT NULL,
-    PRIMARY KEY (product_id, member_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE COUPON (
-    coupon_id VARCHAR(20) PRIMARY KEY,
-    issued_id VARCHAR(20) NOT NULL,
-    discount_price INT NOT NULL,
-    end_day INT NOT NULL,
-    last_edit_date DATETIME NOT NULL,
-   FOREIGN KEY (issued_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE MEMBER_COUPON (
-    member_coupon_id VARCHAR(20) PRIMARY KEY,
-    member_id VARCHAR(20) NOT NULL,
-    coupon_id VARCHAR(20) NOT NULL,
-    use_date DATETIME,
-    issued_date DATETIME NOT NULL,
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id),
-    FOREIGN KEY (coupon_id) REFERENCES COUPON(coupon_id)
-);
-
-CREATE TABLE ORDERS (
-    order_id VARCHAR(20) PRIMARY KEY,
-    member_id VARCHAR(20) NOT NULL,
-    member_coupon_id VARCHAR(20) NOT NULL,
-    order_date DATETIME NOT NULL,
-    last_order_price INT NOT NULL,
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id),
-    FOREIGN KEY (member_coupon_id) REFERENCES MEMBER_COUPON(member_coupon_id)
-);
-
-CREATE TABLE ORDER_DETAIL (
-    order_id VARCHAR(20) NOT NULL,
-    product_id VARCHAR(20) NOT NULL,
-    price INT NOT NULL,
-    PRIMARY KEY (order_id, product_id),
-    FOREIGN KEY (order_id) REFERENCES ORDERS(order_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id)
-);
-
-CREATE TABLE CART (
-    member_id VARCHAR(20) NOT NULL,
-    product_id VARCHAR(20) NOT NULL,
-    cart_add_date DATETIME NOT NULL,
-    PRIMARY KEY (member_id, product_id),
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id)
-);
-
-CREATE TABLE WISHLIST (
-    product_id VARCHAR(20) NOT NULL,
-    member_id VARCHAR(20) NOT NULL,
-    wishlist_add_date DATETIME NOT NULL,
-    PRIMARY KEY (product_id, member_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE POINT (
-    member_id VARCHAR(20) PRIMARY KEY,
-    last_point INT NOT NULL,
-    expire_at DATETIME NOT NULL,
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE POINT_HISTORY (
-    created_at DATETIME NOT NULL,
-    member_id VARCHAR(20) NOT NULL,
-    point INT NOT NULL,
-    plus_minus VARCHAR(1) NOT NULL CHECK (plus_minus IN ('+', '-')),
-    description TEXT NOT NULL,
-    PRIMARY KEY (created_at, member_id),
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE REVIEW (
-    product_id VARCHAR(20) NOT NULL,
-    member_id VARCHAR(20) NOT NULL,
-    content TEXT,
-    rate INT NOT NULL,
-    last_edit_date DATETIME NOT NULL,
-    first_review DATETIME NOT NULL,
-    PRIMARY KEY (product_id, member_id),
-    FOREIGN KEY (product_id) REFERENCES PRODUCT(product_id),
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE QUESTION (
-    qna_id VARCHAR(20) PRIMARY KEY,
-    member_id VARCHAR(20) NOT NULL,
-    title VARCHAR(300) NOT NULL,
-    content TEXT NOT NULL,
-    first_question DATETIME NOT NULL,
-    last_edit_date DATETIME NOT NULL,
-    FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
-);
-
-CREATE TABLE ANSWER (
-    qna_id VARCHAR(20) PRIMARY KEY,
-    answer_member_id VARCHAR(20) NOT NULL,
-    status VARCHAR(1) NOT NULL,
-    answer_content TEXT,
-    stauts_date DATETIME,
-    first_answer DATETIME NOT NULL,
-    last_edit_date DATETIME NOT NULL,
-    FOREIGN KEY (qna_id) REFERENCES QUESTION(qna_id),
-    FOREIGN KEY (answer_member_id) REFERENCES MEMBER(member_id)
-);
-
-ALTER TABLE MEMBER MODIFY register_date DATETIME DEFAULT NOW();
-ALTER TABLE QUESTION MODIFY last_edit_date DATETIME DEFAULT NOW();
-ALTER TABLE QUESTION MODIFY first_question DATETIME DEFAULT NOW();
-ALTER TABLE COUPON MODIFY last_edit_date DATETIME DEFAULT NOW();
-ALTER TABLE MEMBER_COUPON ADD CONSTRAINT UNIQUE(member_id, coupon_id);
-ALTER TABLE MEMBER_COUPON MODIFY issued_date DATETIME DEFAULT NOW();
-ALTER TABLE POINT_HISTORY MODIFY created_at DATETIME DEFAULT NOW();
-ALTER TABLE ANSWER MODIFY first_answer DATETIME DEFAULT NOW();
-ALTER TABLE ANSWER MODIFY last_edit_date DATETIME DEFAULT NOW();
-ALTER TABLE CART MODIFY cart_add_date DATETIME DEFAULT NOW();
-ALTER TABLE WISHLIST MODIFY wishlist_add_date DATETIME DEFAULT NOW();
-ALTER TABLE PRODUCT MODIFY first_product DATETIME DEFAULT NOW();
-ALTER TABLE PRODUCT MODIFY last_edit_date DATETIME DEFAULT NOW();
-ALTER TABLE REVIEW MODIFY first_review DATETIME DEFAULT NOW();
-ALTER TABLE REVIEW MODIFY last_edit_date DATETIME DEFAULT NOW();
-
-
-
+-- ================================================= --
+--                    답변 (ANSWER) 데이터
+-- ================================================= --
+INSERT INTO ANSWER (qna_id, answer_member_id, status, answer_content, status_date, first_answer, last_edit_date)
+VALUES
+    (1, 3, 'Y', 'Please follow installer steps.', NOW(), NOW(), NOW()),
+    (2, 4, 'Y', 'License reissued.', NOW(), NOW(), NOW()),
+    (3, 5, 'Y', 'Yes, it works on Mac.', NOW(), NOW(), NOW()),
+    (4, 6, 'Y', 'Refund processed.', NOW(), NOW(), NOW()),
+    (5, 7, 'Y', 'Updates are free.', NOW(), NOW(), NOW()),
+    (6, 8, 'Y', 'Discounts applied.', NOW(), NOW(), NOW()),
+    (7, 9, 'Y', 'Features listed on site.', NOW(), NOW(), NOW()),
+    (8, 10, 'Y', 'Free trial available.', NOW(), NOW(), NOW()),
+    (9, 1, 'Y', 'Email changed.', NOW(), NOW(), NOW()),
+    (10, 2, 'Y', 'Contact via email.', NOW(), NOW(), NOW());
 ```
-
