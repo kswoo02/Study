@@ -48,9 +48,65 @@
               "icon": "lucide-file",
               "title": "요건정의"
             }
+          },
+          {
+            "id": "488495fe31337a70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/0701/무제.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "무제"
+            }
+          },
+          {
+            "id": "fdf57e2cc7e99685",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/0704/무제 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "무제 1"
+            }
+          },
+          {
+            "id": "c7ec40bac1d4c4bc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/0702/무제 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "무제 2"
+            }
+          },
+          {
+            "id": "d725f3f35f15b7e6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/0701/Git 환경 셋팅.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Git 환경 셋팅"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -123,7 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DB/Mysql/0630/ERD - 1.md",
+                "file": "JAVA/0701/무제.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +189,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "ERD - 1 의 백링크"
+              "title": "무제 의 백링크"
             }
           },
           {
@@ -142,12 +198,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DB/Mysql/0630/ERD - 1.md",
-                "linksCollapsed": false,
+                "file": "JAVA/0701/무제.md",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "ERD - 1 의 나가는 링크"
+              "title": "무제 의 나가는 링크"
             }
           },
           {
@@ -171,13 +227,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DB/Mysql/0630/ERD - 1.md",
-                "followCursor": true,
-                "showSearch": true,
+                "file": "JAVA/0701/Git 환경 셋팅.md",
+                "followCursor": false,
+                "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "ERD - 1 의 개요"
+              "title": "Git 환경 셋팅 의 개요"
             }
           },
           {
@@ -208,19 +264,31 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a7f1976d682dbb4a",
+  "active": "67d0f33e8359c799",
   "lastOpenFiles": [
-    "DB/Mysql/0630/DML.md",
-    "DB/Mysql/0630/DDL.md",
+    "DB/Mysql/SQL 수업 목표.md",
+    "JAVA/0703/무제 3.md",
+    "JAVA/0704",
+    "JAVA/0703",
+    "JAVA/0702",
+    "JAVA/0701",
+    "JAVA/0702/무제 2.md",
+    "JAVA/0704/무제 1.md",
+    "JAVA/0701/Git 환경 셋팅.md",
     "DB/Mysql/0630/요건정의.md",
+    "무제 1/desktop.ini",
+    "무제/desktop.ini",
+    "JAVA",
+    "무제",
+    "DB/Mysql/0630/DML.md",
+    "Welcome.md",
+    "DB/Mysql/0630/DDL.md",
     "DB/Mysql/0627/ERD.md",
     "DB/Mysql/0626/0626.md",
     "DB/Mysql/0625/0625 Case + date.md",
     "DB/Mysql/0625/0625 GROUB BY.md",
     "DB/Mysql/0625/0625 JOIN.md",
-    "Welcome.md",
     "DB/Mysql/0623 ~ 0624/0624_함수.md",
-    "DB/Mysql/SQL 수업 목표.md",
     "DB/Mysql/0623 ~ 0624/0623_테이블 생성 및 데이터 삽입.md"
   ]
 }
