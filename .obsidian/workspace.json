@@ -4,109 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "71c3aff1eb4002c7",
+        "id": "82668f1e6eefe0a0",
         "type": "tabs",
         "children": [
           {
-            "id": "7482b8077ebf08f2",
+            "id": "cca0735ed92d13e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DB/Mysql/0627/ERD.md",
+                "file": "JAVA/0702/자바 기초.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ERD"
-            }
-          },
-          {
-            "id": "f5fcb2f1b162c3a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/Mysql/0630/DDL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DDL"
-            }
-          },
-          {
-            "id": "a7f1976d682dbb4a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DB/Mysql/0630/요건정의.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "요건정의"
-            }
-          },
-          {
-            "id": "488495fe31337a70",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JAVA/0701/무제.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "무제"
-            }
-          },
-          {
-            "id": "fdf57e2cc7e99685",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JAVA/0704/무제 1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "무제 1"
-            }
-          },
-          {
-            "id": "c7ec40bac1d4c4bc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JAVA/0702/무제 2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "무제 2"
-            }
-          },
-          {
-            "id": "d725f3f35f15b7e6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JAVA/0701/Git 환경 셋팅.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Git 환경 셋팅"
+              "title": "자바 기초"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -264,17 +179,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "67d0f33e8359c799",
+  "active": "cca0735ed92d13e8",
   "lastOpenFiles": [
+    "JAVA/0701/Git 환경 셋팅.md",
+    "JAVA/0702/자바 기초.md",
     "DB/Mysql/SQL 수업 목표.md",
     "JAVA/0703/무제 3.md",
     "JAVA/0704",
     "JAVA/0703",
     "JAVA/0702",
     "JAVA/0701",
-    "JAVA/0702/무제 2.md",
     "JAVA/0704/무제 1.md",
-    "JAVA/0701/Git 환경 셋팅.md",
     "DB/Mysql/0630/요건정의.md",
     "무제 1/desktop.ini",
     "무제/desktop.ini",
