@@ -27,16 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "메소드 오버로딩 VS 메소드 오버라이딩.md",
+                "file": "JAVA/자바 함수/메소드 오버로딩 VS 메소드 오버라이딩.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "메소드 오버로딩 VS 메소드 오버라이딩"
             }
+          },
+          {
+            "id": "fe4c5a028cd8d35a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/자바 기초.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "자바 기초"
+            }
+          },
+          {
+            "id": "8108d1f30a7dadc1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JAVA/자바 함수/OOP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "OOP"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -194,13 +222,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3373cd4fbb7116fb",
+  "active": "8108d1f30a7dadc1",
   "lastOpenFiles": [
-    "JAVA/0702/자바 기초.md",
-    "메소드 오버로딩 VS 메소드 오버라이딩.md",
+    "JAVA/자바 함수/메소드 오버로딩 VS 메소드 오버라이딩.md",
+    "JAVA/자바 함수/Inheritance.md",
+    "JAVA/자바 함수/OOP.md",
+    "JAVA/자바 기초.md",
+    "JAVA/자바 함수",
+    "JAVA/0703/무제 3.md",
     "JAVA/0701/Git 환경 셋팅.md",
     "DB/Mysql/SQL 수업 목표.md",
-    "JAVA/0703/무제 3.md",
     "JAVA/0704",
     "JAVA/0703",
     "JAVA/0702",
