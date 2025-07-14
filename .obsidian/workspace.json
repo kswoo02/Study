@@ -48,9 +48,26 @@
               "icon": "lucide-file",
               "title": "0707"
             }
+          },
+          {
+            "id": "873e002d8bc71d94",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "무제.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "무제"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -208,10 +225,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "afc55b7f1a430688",
+  "active": "873e002d8bc71d94",
   "lastOpenFiles": [
-    "JAVA/자바 목표.md",
+    "무제.canvas",
+    "파이썬 exe파일/exe파일 만들기.md",
     "0707.md",
+    "0714/desktop.ini",
+    "파이썬 exe파일",
+    "0714",
+    "JAVA/자바 목표.md",
     "0707",
     "JAVA/자바 함수 개념/OOP 기본 요소.md",
     "JAVA/자바 함수 개념/OOP 핵심.md",
@@ -234,9 +256,6 @@
     "JAVA/0701",
     "DB/Mysql/0630/요건정의.md",
     "무제 1/desktop.ini",
-    "무제/desktop.ini",
-    "JAVA",
-    "JAVA/UML",
     "DB/Mysql/0630/DML.md",
     "DB/Mysql/0630/DDL.md",
     "DB/Mysql/0627/ERD.md",
