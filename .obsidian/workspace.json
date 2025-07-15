@@ -53,17 +53,14 @@
             "id": "873e002d8bc71d94",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "무제.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "JAVA/자바 함수 개념/OOP 핵심.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "무제"
+              "icon": "lucide-file",
+              "title": "OOP 핵심"
             }
           }
         ],
