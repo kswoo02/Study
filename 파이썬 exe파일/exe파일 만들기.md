@@ -13,3 +13,6 @@ pyinstaller --onefile  --windowed "review.py"
 pyinstaller --onefile  --windowed "ttest.py"
 # 인스타 언팔 자동화 exe
 	pyinstaller --onefile --windowed test_V2.1.py
+pyinstaller --onefile --windowed Instargram_Unfollow.py
+pyinstaller --onefile --windowed Un_Inst_API.py
+pyinstaller --onefile --windowed follower_ing.py
