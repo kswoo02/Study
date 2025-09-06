@@ -1,4 +1,4 @@
-## ✅ 4. 한 방에 처리하는 배치파일 (선택)
+## 4. 한 번에 처리
 
 
 pyinstaller --noconsole --onefile --add-data "chromedriver.exe;." "가입인사 댓글.py"
@@ -16,3 +16,4 @@ pyinstaller --onefile  --windowed "ttest.py"
 pyinstaller --onefile --windowed Instargram_Unfollow.py
 pyinstaller --onefile --windowed Un_Inst_API.py
 pyinstaller --onefile --windowed follower_ing.py
+pyinstaller --onefile --windowed list_unfo.py
